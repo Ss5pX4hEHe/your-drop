@@ -8,6 +8,7 @@ import { StoreProvider } from '@/components/Store';
 import { Header } from '@/components/Header';
 import { AmbientBackground } from '@/components/AmbientBackground';
 import { PERF_BOOT } from '@/lib/perf';
+import { Metrika } from '@/components/Metrika';
 
 export const metadata: Metadata = {
   title: 'Your Drop — открытие кейсов CS2, апгрейд и контракты',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head><script dangerouslySetInnerHTML={{ __html: PERF_BOOT }} /></head>
       <body>
         <AmbientBackground />
+        <Metrika />
         <StoreProvider>
           <Header />
           <main className="wrap page">{children}</main>
